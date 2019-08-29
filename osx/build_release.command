@@ -3,6 +3,7 @@
 here="`dirname \"$0\"`"
 buildDir="$here/build"
 cd "$here" || exit 1
+rm -R $buildDir &>/dev/null
 mkdir -p $buildDir
 
 xcodebuild CONFIGURATION_BUILD_DIR=$buildDir
